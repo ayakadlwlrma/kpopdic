@@ -1,0 +1,65 @@
+<div class='ayakaaa'>
+
+<%= form_for @post do |f| %>
+    <div class='ayakab'>
+    <div class="field">
+        <%= f.label :name %>
+        <%= f.text_field :name, :size => 30 %>
+    </div>
+
+
+    <div class="field">
+        <%= f.label :image %>
+        <%= f.file_field :image %>
+    </div>
+
+    <div class="field">
+        <%= f.label :icon %>
+        <%= f.file_field :icon %>
+    </div>
+
+
+
+    <div class="field">
+        <%= f.label :photos %>
+        <%= f.file_field :photos, multiple: true %>
+    </div>
+
+    <div class="field">
+        <%= f.label :member（誕生日） %>
+        <%= f.text_area :member, :size=>"50×10" %>
+    </div>
+
+    <div class="field">
+        <%= f.label :age %>
+        <%= f.text_field :age, :size => 30 %>
+    </div>
+
+    <div class="field">
+        <%= f.label :team %>
+        <%= f.select :team,
+        [["SM","SM"],["JYP","JYP"],["YG","YG"],["HYBE","HYBE"],["その他","その他"]],
+        include_blank: "選択して下さい" %>
+    </div>
+
+    <div class="field">
+        <%= f.label :origin %>
+        <%= f.text_area :origin, :size =>"80×10" %>
+    </div>
+
+    <div class="field">
+        <%= f.label :movie %>
+        <%= f.text_field :movie, :size => 50 %>
+    </div>
+
+    <div class="genre">
+        <%= f.label :genre %>
+        <%= f.select :genre,
+        [["ナムジャドル","ナムジャドル"],["ヨジャドル","ヨジャドル"]],include_blank: "選択して下さい" %>
+    </div>
+
+    <%= f.submit "投稿する" %>
+    
+<% end %>
+</div>
+</div>

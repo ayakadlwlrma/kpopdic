@@ -1,0 +1,44 @@
+<%= stylesheet_link_tag 'login', :media => "all" %>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Noto+Sans:ital,wght@1,700&display=swap" rel="stylesheet">
+
+<div class="mmm">
+  
+  <div class="photo">
+    <image src="../../../assets/login.jpg" width="100%" height="650px">
+  </div>
+
+  <div class="login">
+    <div class="ki">
+      <div class="ee">Log in</div>
+      <ul>
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <li>
+            <%= f.label :email %><br>
+            <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+          </li>
+
+          <li>
+            <%= f.label :password %><br>
+            <%= f.password_field :password, autocomplete: "current-password" %>
+          </li>
+
+          <% if devise_mapping.rememberable? %>
+            <li>
+              <%= f.check_box :remember_me %>
+              <%= f.label :remember_me %>
+            </li>
+          <% end %>
+
+          <li>
+            <%= f.submit "Log in", class:"sends" %>
+          </li>
+        <% end %>
+          
+      </ul>
+    </div>
+  </div>
+
+</div>

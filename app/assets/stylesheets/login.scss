@@ -1,0 +1,50 @@
+.mmm{
+    display: flex;
+    text-align: center;
+    height: 650px;  
+}
+
+.photo{
+    display: block;
+    width: 40%;
+    height: 650px;  
+
+    background-color: antiquewhite;
+}
+.login{
+    display: block;
+    width: 60%;
+
+    
+}
+.ki{
+    display: block;
+    width: 40%;
+    height: 60%;
+    margin: 120px 260px;
+    border: solid #323C59;
+    border-radius: 10%;
+    padding: 0 30px;
+}
+.ee{
+    padding-top: 50px;
+    font-size: 30px;
+
+    font-family: 'Lato', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 43px;
+}
+.ki ul{
+    list-style: none;
+    text-align: center;
+    margin: 35px 50px;
+}
+.ki li{
+    margin: 10px;
+}
+.sends{
+    width: 200px;
+    height: 30px;
+    font-size: 17px;
+    margin-top: 5px;
+}

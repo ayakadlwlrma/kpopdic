@@ -1,0 +1,130 @@
+<%= stylesheet_link_tag 'show', :media => "all" %>
+
+<% if t.genre == "ナムジャドル" %> 
+
+
+  <div class="post">
+
+
+      <div class="name">
+        <div class="logo">
+          <%= image_tag @post.icon_url, size: "90x90" if @post.icon? %>
+        </div>
+        <div class="groupmei">
+          <%= @post.name %>
+        </div>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
+        <div class="heart">
+          <% if user_signed_in? %>
+            <% if current_user.already_liked?(@post) %>
+              <%= link_to post_like_path(@post), method: :delete do %>
+                <span class="icon_layers">
+                  <i class="fa-sharp fa-solid fa-heart"></i>
+                  <span class="icon_layers_text"><%= @post.likes.count %></span>
+                </span>
+              <% end %>
+            <% else %>
+              <%= link_to post_likes_path(@post), method: :post do %>
+                <span class="icon_layers">
+                  <i class="fa-sharp fa-solid fa-heart"></i>
+                  <span class="icon_layers_text"><%= @post.likes.count %></span>
+                </span>
+              <% end %>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+
+
+
+    <div class="img">
+      <%= image_tag @post.image_url, size: "750x488" if @post.image? %>
+    </div>
+    
+    <div class="si">
+      <% @post.images.each do |image| %>
+        <%= image_tag image.photo_url, size: "150x200" %>
+      <% end %>
+    </div>
+    <div class="siii">
+        <div class="sin">
+          <div class="sin2">HESSEUNG</div>
+          <div class="sin2">2001 . 10 . 15</div>
+        </div>
+        <div class="sin">
+          <div class="sin2">JAKE</div>
+          <div class="sin2">2002 . 11 . 15</div>
+        </div>
+        <div class="sin">
+          <div class="sin2">JAY</div>
+          <div class="sin2">2002 . 04 . 20</div>
+        </div>
+        <div class="sin">
+          <div class="sin2">JUNGWON</div>
+          <div class="sin2">2004 . 02 . 09</div>       
+        </div>
+        <div class="sin">
+          <div class="sin2">NI-KI</div>
+          <div class="sin2">2005 . 12 . 09</div>
+        </div>
+        <div class="sin">
+          <div class="sin2">SUNGHOON</div>
+          <div class="sin2">2002 . 12 . 08</div>
+        </div>
+        <div class="sin">
+          <div class="sin2">SUNOO</div>
+          <div class="sin2">2003 . 06 . 24</div>
+        </div>
+    </div>
+    </div>
+  </div>
+
+<div class="youtube">
+  
+  <div class="gh">
+
+    <iframe width="700" height="450" src="https://www.youtube.com/embed/<%= @post.movie%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div class="ef">Debut Song</div>
+
+</div>
+
+
+<div class="comment-wrapper">
+  <div class="ij">
+  </div>
+
+  <div class="kl">
+    <% if user_signed_in? %>
+      <div class="comment-form">
+        <div class="title">コメント</div>
+        <div class="mini">
+          <%= form_with(model: [@post, @comment], local: true) do |f| %>
+            <br>
+            <%= f.text_area :content, size: "90x5"%>
+            <br>
+            <%= button_tag type: "submit" do %>
+              <i align="right" class="fa fa-paper-plane"></i> コメント
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+
+    <div class="comments-container">
+      <h4>コメント一覧</h4>
+      <% @comments.each do |t| %>
+        <div class="comment">
+          <div class="right-container"><%= t.user.email %></div>
+          <div class="left-container"><%= t.content %></div>
+        </div>
+      <% end %>
+      <br>
+      <br>
+      <br>
+    </div>
+  </div>
+
+</div>

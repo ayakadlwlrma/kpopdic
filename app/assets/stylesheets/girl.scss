@@ -1,0 +1,54 @@
+.tab-area{
+    width: 80%;
+    margin: 0 auto;
+    }
+    .tab-btn{
+    display:none; /*タブの切り替えを制御するラジオボタンを非表示に*/
+    }
+    .tab-list-wrap{
+    padding:0; /*デフォルトの値をクリア*/
+    margin: 0; /*デフォルトの値をクリア*/
+    list-style-type:none; /*デフォルトの値をクリア*/
+    display:flex; /*ボタンを横並びに*/
+    justify-content:space-between; /*ボタンを横幅いっぱいに配置*/
+
+    
+    }
+    
+    .tab-list{
+    display:block;
+    width: 288px;
+    padding: 8px 0;
+    text-align:center;
+    border-top:1px solid #4e7bcc;
+    border-left:1px solid #4e7bcc;
+    border-right:1px solid #4e7bcc;
+    border-radius: 4px 4px 0 0;
+    background: #c5daff;
+    box-sizing:border-box; /*borderの値を横幅に含める*/
+    cursor:pointer; /*オンマウス時にカーソルを指の形に*/
+
+
+    }
+    
+    #tab-btn1:checked ~ .tab-list-wrap #tab-list1,
+    #tab-btn2:checked ~ .tab-list-wrap #tab-list2,
+    #tab-btn3:checked ~ .tab-list-wrap #tab-list3,
+    #tab-btn4:checked ~ .tab-list-wrap #tab-list4{
+    background:#ffffff; /*対応するボタンにチェックが入ったときに背景を#ffffff（白）に*/
+    }
+    .tab-content{
+    padding:20px;
+    display:none; /*初期状態を非表示に*/
+    }
+    #tab-btn1:checked ~ .tab-content-wrap #tab-content1,
+    #tab-btn2:checked ~ .tab-content-wrap #tab-content2,
+    #tab-btn3:checked ~ .tab-content-wrap #tab-content3,
+    #tab-btn4:checked ~ .tab-content-wrap #tab-content4{
+    display: block;/*対応するボタンにチェックが入ったときに表示*/
+    }
+
+
+
+
+    

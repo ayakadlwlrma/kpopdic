@@ -1,0 +1,219 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.post{
+    height: 1100px;
+    border-top: solid #323C59;
+}
+
+.name{
+    font-family: 'Lato', sans-serif;
+    font-size: 50px;
+    color: #323C59;
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f3f3;
+}
+.logo{
+    border: bold #323C59;
+    border-radius: 50%;
+    padding: 12px;
+    margin: 24px;
+}
+.groupmei{
+    font-family: 'Lato', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 70px;
+
+}
+.heart{
+    font-size: 32px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.icon_layers{
+	display: flex;
+    height: 3em;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    margin: 24px;
+}
+
+.icon_layers_icon{
+	position: absolute;
+	left: 0;
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	font-size: 3em;
+}
+
+.icon_layers_text{
+	position: relative;
+	top: 0.7em;
+    left: auto;
+	width: 100%;
+	color: #323C59;
+	font-size: 0.9em;
+}
+
+
+.post .img{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.si{
+    margin: 32px;
+    display: flex;
+    justify-content: center;
+    height: 150px;
+   
+}
+.siii{
+    
+    display: flex;
+    justify-content: center;
+    background-color: #f3f3f3;
+}
+.sin{
+    text-align: center;
+    color: #323C59;
+    font-size: 16px;
+    margin: 12px;
+}
+.sin2{
+    margin: 8px;
+}
+/*.detail{
+    position: absolute;
+    top: 320px;
+    left: 800px;
+}
+
+ol {
+    box-shadow :0px 0px 3px silver;
+    border: solid 1px whitesmoke;
+    padding: 0.5em 1em 0.5em 2.3em;
+    position: relative;
+    background: #fafafa;
+}
+
+ol li {
+    line-height: 1.5;
+    padding: 0.5em 0;
+    list-style-type: none!important;
+}*/
+
+ol li:before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f144";
+    position: absolute;
+    left : 1em; /*左端からのアイコンまで*/
+    color: gray; /*アイコン色*/
+}
+
+.youtube{
+    width: 100%;
+    height: 550px;
+    display: flex;
+}
+.gh{
+    display: block;
+    background-color: #323C59;
+    width: 90%;
+    text-align: center;
+    padding: 50px 0;
+}
+.ef{
+    display: block;
+    width: 10%;
+    writing-mode: vertical-rl;
+    font-size: 80px;
+    color: #323C59;
+    padding-right: 25px;
+    text-decoration: overline;
+}
+
+
+
+.comment-wrapper{
+    display: flex;
+    width: 100%;
+    height: 1000px;
+    background-color: antiquewhite;
+}
+.ij{
+    display: block;
+    background-color: #F2C9D1;
+    width: 10%;
+    height: auto;
+}
+.kl{
+    display: block;
+    background-color: white;
+    width: 90%;
+    height: auto;
+}
+.comment-form{
+    margin: 100px auto 80px;
+    padding-bottom: 10px;
+    width: 60%;
+    height: 180px;
+    border: solid #F2C9D1;
+    border-radius: 10px;
+    text-align: center;
+    background-color: white
+}
+
+.title{
+    text-align: center;
+    padding-top: 25px;
+}
+
+
+.comments-container {
+    width: 60%;
+    height: auto;
+    text-align: center;
+    margin: 30px auto;
+}
+.comments-container h4 {
+    width: 100px;
+    margin: 30px auto;
+    text-align: center;
+}
+.comment {
+    border-top: solid #323C59;
+    margin-top: 5px;
+    padding-top: 10px;
+    
+}
+.comment .right-container {
+    margin: 3px 0 3px 30px;
+    text-align: left;
+    font-size: 12px;
+}
+
+.comment .right-container:before{
+    font-family: "Font Awesome 5 Free";
+    content: "\f2be";
+    color: gray;
+    padding-right: 8px;
+}
+
+.left-container{
+    border: solid #f7f7f7;
+    background-color: #e5e5e5;
+    padding: 0.5em 1em 0.5em 2.3em;
+    position: relative;
+}

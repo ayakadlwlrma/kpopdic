@@ -1,0 +1,241 @@
+.tab-area{
+    width: 80%;
+    margin: 0 auto;
+    }
+    .tab-btn{
+    display:none; /*タブの切り替えを制御するラジオボタンを非表示に*/
+    }
+    .tab-list-wrap{
+    padding:0; /*デフォルトの値をクリア*/
+    margin: 0; /*デフォルトの値をクリア*/
+    list-style-type:none; /*デフォルトの値をクリア*/
+    display:flex; /*ボタンを横並びに*/
+    justify-content:space-between; /*ボタンを横幅いっぱいに配置*/
+
+    
+    }
+    
+    .tab-list{
+    display:block;
+    width: 288px;
+    padding: 8px 0;
+    text-align:center;
+    border-top:1px solid #4e7bcc;
+    border-left:1px solid #4e7bcc;
+    border-right:1px solid #4e7bcc;
+    border-radius: 4px 4px 0 0;
+    background: #c5daff;
+    box-sizing:border-box; /*borderの値を横幅に含める*/
+    cursor:pointer; /*オンマウス時にカーソルを指の形に*/
+
+
+    }
+    
+    #tab-btn1:checked ~ .tab-list-wrap #tab-list1,
+    #tab-btn2:checked ~ .tab-list-wrap #tab-list2,
+    #tab-btn3:checked ~ .tab-list-wrap #tab-list3,
+    #tab-btn4:checked ~ .tab-list-wrap #tab-list4{
+    background:#ffffff; /*対応するボタンにチェックが入ったときに背景を#ffffff（白）に*/
+    }
+    .tab-content{
+    padding:20px;
+    display:none; /*初期状態を非表示に*/
+    }
+    #tab-btn1:checked ~ .tab-content-wrap #tab-content1,
+    #tab-btn2:checked ~ .tab-content-wrap #tab-content2,
+    #tab-btn3:checked ~ .tab-content-wrap #tab-content3,
+    #tab-btn4:checked ~ .tab-content-wrap #tab-content4{
+    display: block;/*対応するボタンにチェックが入ったときに表示*/
+    }
+
+    #tab-content4{
+      background-color: rgba(242,201,209,0.6);
+      border-radius: 20px;
+      margin-top: 20px;
+    }
+
+ 
+    .youchan{
+      list-style: none;
+      display: block;
+      flex-direction: column;
+      border-right:5px solid #323C59; /*線の設定*/
+      padding: 2px;
+      margin-left: 5px;
+      width: 49.2%;
+    }
+    .timeline-date{
+      width: 200px;
+      margin-left: 450px;
+      font-size: 17px;
+      text-align: center;
+      color: #323C59;
+      margin-bottom: 15px;
+      border-bottom:3px solid #323C59;
+    }
+    .timelinebox{
+      display: flex;
+      width: 400px;
+      justify-content: space-between;
+      margin-left: 200px;
+    }
+    .timeline-content{
+      display: block;
+      padding-top: 10px;
+      
+    }
+    .timeline-name{
+      display: block;
+      font-size: large;
+      width: 220px;
+      padding-left: 20px;
+      padding-top: 30px;
+    }
+    .namec{
+      font-size: 30px;
+      
+    }
+
+
+    .border_spread_btns{
+      position: relative; 
+      display: block; 
+      padding-left: 2px;
+      padding-bottom: 15px;
+      color: #323C59; 
+      text-decoration: none;
+      border-top: 3px;
+  }
+  .border_spread_btns:hover{ 
+      cursor: pointer; 
+      text-decoration: none;
+  }
+  .border_spread_btns::after{ 
+      position: absolute; 
+      bottom: 10px; 
+      left: 0; 
+      content: ''; 
+      width: 30%; 
+      height: 2px; 
+      margin-right: 30px;
+      background: #333; 
+      transform: scale(0.5, 1); 
+      transform-origin: center top; 
+      transition: transform .3s;
+  }
+  .border_spread_btns:hover::after{ 
+      transform: scale(1, 1);
+  }
+
+
+    .nozomi{
+      list-style: none;
+      display: block;
+      flex-direction: column;
+      border-left:5px solid #323C59; /*線の設定*/
+      padding: 2px 20px;
+      margin-left: 587px;
+    }
+    #tab-content4 li{
+      width: 31%;
+    }
+    .timeline{
+        list-style: none;
+      }
+      .timeline > li {
+        margin-bottom: 60px;
+      }
+      .timeline-dates{
+        width: 110px;
+        font-size: 17px;
+        text-align: center;
+        color: #323C59;
+        margin-bottom: 15px;
+        border-bottom:3px solid #323C59;
+      }
+      .timelineboxes{
+        display: flex;
+        width: 600px;
+      }
+      .timeline-contents{
+        display: block;
+        margin-left: 20px;
+        padding-top: 10px;
+      }
+      .timeline-names{
+        display: block;
+        font-size: large;
+        padding: 30px;
+      }
+      .namea{
+        font-size: 30px;
+      }
+
+      .border_spread_btna{
+        position: relative; 
+        display: block; 
+        padding-left: 2px;
+        padding-bottom: 15px;
+        color: #323C59; 
+        text-decoration: none;
+        border-top: 3px;
+    }
+    .border_spread_btna:hover{ 
+        cursor: pointer; 
+        text-decoration: none;
+    }
+    .border_spread_btna::after{ 
+        position: absolute; 
+        bottom: 10px; 
+        left: 0; 
+        content: ''; 
+        width: 60%; 
+        height: 2px; 
+        margin-right: 50px;
+        padding-left: 30px;
+        background: #333; 
+        transform: scale(0.5, 1); 
+        transform-origin: center top; 
+        transition: transform .3s;
+    }
+    .border_spread_btna:hover::after{ 
+        transform: scale(1, 1);
+    }
+
+    /* for Desktop */
+      @media ( min-width : 640px ){
+        .timeline > li {
+          overflow: hidden;
+          margin: 0;
+          position: relative;
+        }
+        .timeline-date {
+          width: 110px;
+          float: left;
+          margin-top: 20px;
+        }
+        
+
+        .timeline-date:after {
+          content: '';
+          width: 14px;
+          height: 14px;
+          background: #323C59;
+          position: absolute;
+          right: 750px;          
+          border-radius: 100%;
+        }
+        .timeline-dates:before {
+          content: '';
+          width: 14px;
+          height: 14px;
+          background: #323C59;
+          position: absolute;
+          right: 750px;          
+          border-radius: 100%;
+        }
+      }
+
+
+
+

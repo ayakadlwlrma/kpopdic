@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.arrow-left icon{
+    height: 100px;
+}
+
+.tab-contentJYP{
+    background-color: #FFDBDB;
+    width: auto;
+    height: auto;
+    padding-bottom: 50px;
+}
+.tab-contentJYP ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;   
+    margin-top: 100px;
+    padding: 50px 130px;     
+}
+.tab-contentJYP li{
+    display: block;
+    flex-direction: row;
+    padding: 2em 0.5em;
+    margin:30px 30px 30px 10px;
+    text-align: center;
+    font-weight: bold;
+    color: #364159;/*文字色*/
+    background-color: #FFDBDB;
+    border: solid 3px #364159;/*線*/
+    border-radius: 10px;/*角の丸み*/
+}
+.tab-contentJYP h3{
+    text-align: center;
+    margin-bottom: 7px;
+}
+.hhh{
+    text-align: center;
+}
+.btn-flat-simple {
+    text-align: center;
+    margin-top: 7px;
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    color: #323C59;
+    background-color: #ECECEC;
+    transition: .4s;
+}    
+.btn-flat-simple:hover {
+    background-color: #323C59;
+    color: #ECECEC;
+}
+.link {
+    text-decoration: none;
+    color: #323C59 ;
+}
+.link:hover{
+    background-color: #323C59;
+    color: #ECECEC;
+}

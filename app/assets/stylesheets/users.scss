@@ -1,0 +1,104 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.zero{
+    background-image: url("iuiu.jpg");
+    background-size: cover;
+    padding: 100px 0;
+}
+.first{
+    border: solid #323C59;
+    margin: 0 100px;
+    background-color: rgba(106,210,247,0.7);;
+}
+.second{
+    height: 100px;
+    
+    text-align: left;
+    padding-left: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 50px;
+
+    color: #323C59;
+}
+.second p{
+    width: 20%;
+    text-align: center;
+    border-bottom: solid #323C59;
+}
+.third{
+    
+    border: solid #323C59;
+    margin: 0 200px 100px 200px;
+    
+
+
+}
+.forth{
+    border-bottom: solid #323C59;
+    
+    
+    display: flex;
+    
+    text-align: center;
+}
+.sixth{
+    display: block;
+    width: 45%;
+    padding: 45px 0;
+    border-right: solid #323C59;
+    
+}
+.seventh{
+    display: block;
+    width: 55%;
+    padding: 50px;
+    font-size: large;
+    text-align: center;
+}
+.seventh ul{
+    list-style: none;
+    padding: 20px;
+    line-height: 40px;
+}
+.seventh li{
+    border-bottom: solid #323C59;
+    padding-bottom: 0%;
+    
+}
+
+
+.okini{
+    
+    font-size: 30px;
+    
+    padding: 40px 35px 20px 35px;
+
+    
+}
+.iri{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px 50px;
+
+    
+}
+.tenth{
+    text-align: center;
+    line-height: normal;
+    margin: 30px;
+
+    
+}
+.eighth{
+    display: block;
+}
+.nineth{
+    display: block;
+}
+.eleventh{
+    display: block;
+}

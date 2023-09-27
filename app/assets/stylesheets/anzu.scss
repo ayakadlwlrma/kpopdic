@@ -1,0 +1,44 @@
+
+  .video-wrap {
+    position: relative;
+  }
+  video {
+    display: block;
+    margin: 0 0 0 auto;
+    width: 100%;
+    min-height: 100vh;
+    background-size: cover;
+  }
+  p {
+    font-family: serif;          
+    color: #fff;
+    font-size: 400%;
+    position: absolute;
+    left: 30%;
+    top: 200px;
+    z-index: 1;
+  }
+
+
+
+
+.sample03 {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    background-image: url("girl.png");
+    }
+.sample03:before {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 15, 20, 0.153);
+    }
+.sample04 {
+    position: absolute;
+    top: 1000px;
+    left: 200px;
+    }

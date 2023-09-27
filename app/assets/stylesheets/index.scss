@@ -1,0 +1,429 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.wraptati{
+    overflow: hidden;
+}
+.init {   
+    transition: transform 10s ease-in-out;
+    transition-duration: 10s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+    transition-property: transform;
+    transition-delay: 2s;
+    transform: scale(1);
+
+    width: 100%;
+    height: 600px; 
+    display: block;
+    object-fit: cover;
+}
+.slow_zoom {
+    transform: scale(1.1);
+}
+
+
+.link-container{
+    display: flex;
+    margin: 200px 10px;
+    justify-content: space-around;
+    width: 100%;
+    height: 350px;
+
+}
+
+.a{
+    display: flex;
+    width: 20%;
+    height: 250px;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    text-align: center;
+    background-color: #f5f5f5;
+    border-radius: 20px;
+}
+.a-bnr {
+    position: relative;
+    overflow: hidden;
+}
+.a-bnr::before,
+.a-bnr::after {
+    content: "";
+    display: block;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    margin: auto;
+    transition: .3s cubic-bezier(0.45, 0, 0.55, 1);
+    opacity: 0;
+}
+.a-bnr::before {
+    background-color:rgba(50,60,89,0.8);
+    width: 100%;
+    height: 100%;  
+    border-radius: 20px;
+
+}
+.a-bnr::after {
+    color: rgba(242,201,209,0.9);
+    content: "ナムジャドル";
+    font-size: 22px;
+    font-weight: bold;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    right: 0;
+}
+.a-bnr:hover::before,
+.a-bnr:hover::after {
+    opacity: 1;
+}
+
+.b{
+    display: flex;
+    width: 20%;
+    height: 250px;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    text-align: center;
+    background-color: #f5f5f5;
+    border-radius: 20px;
+
+}
+.b-bnr {
+    position: relative;
+    overflow: hidden;
+}
+.b-bnr::before,
+.b-bnr::after {
+    content: "";
+    display: block;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    margin: auto;
+    transition: .3s cubic-bezier(0.45, 0, 0.55, 1);
+    opacity: 0;
+}
+.b-bnr::before {
+    background: rgba(242,201,209,0.7);
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+
+}
+.b-bnr::after {
+    color: rgba(50,60,89,0.9);
+    content: "ヨジャドル";
+    font-size: 22px;
+    font-weight: bold;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    right: 0;
+}
+.b-bnr:hover::before,
+.b-bnr:hover::after {
+    opacity: 1;
+}
+
+
+.c{
+    display: flex;
+    width: 20%;
+    height: 250px;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    text-align: center;
+    background-color: #f5f5f5;
+    border-radius: 20px;
+
+}
+.c-bnr {
+    position: relative;
+    overflow: hidden;
+}
+.c-bnr::before,
+.c-bnr::after {
+    content: "";
+    display: block;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    margin: auto;
+    transition: .3s cubic-bezier(0.45, 0, 0.55, 1);
+    opacity: 0;
+}
+.c-bnr::before {
+    background: rgba(50,60,89,0.8);
+    width: 100%;
+    height: 200px; 
+    border-radius: 20px;
+   
+}
+.c-bnr::after {
+    color: rgba(242,201,209,0.9);
+    content: "事務所ごと";
+    font-size: 22px;
+    font-weight: bold;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    right: 0;
+}
+.c-bnr:hover::before,
+.c-bnr:hover::after {
+    opacity: 1;
+}
+
+
+.d{
+    display: flex;
+    width: 20%;
+    height: 250px;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    text-align: center;
+    background-color: #f5f5f5;
+    border-radius: 20px;
+
+}
+.d-bnr {
+    position: relative;
+    overflow: hidden;
+}
+.d-bnr::before,
+.d-bnr::after {
+    content: "";
+    display: block;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    margin: auto;
+    transition: .3s cubic-bezier(0.45, 0, 0.55, 1);
+    opacity: 0;
+}
+.d-bnr::before {
+    background: rgba(242,201,209,0.7);
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+
+}
+.d-bnr::after {
+    color: rgba(50,60,89,0.8);
+    content: "デビュー順";
+    font-size: 22px;
+    font-weight: bold;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    right: 0;
+}
+.d-bnr:hover::before,
+.d-bnr:hover::after {
+    opacity: 1;
+}
+
+
+.search-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f3f3;
+    width: 90%;
+    height: 100px;
+    margin-left: 5%;
+    margin-top: -5%;
+    margin-bottom: 2%;
+}
+
+
+
+
+.search-container input[type="text"] {
+    width: 300px;
+    height: 40px;
+    text-align: center;
+    margin: 12px;
+    color: #868383;
+    background-color: #ffffff;
+    border: 1.5px solid #323c5961;
+
+}
+
+.search-container input[type="submit"]{
+    width: 45px;
+    height: 41px;
+    margin: 12px;
+    text-align: center;
+    color: #868383;
+
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 1.5px solid #323c5961;
+}
+
+
+::-moz-placeholder {
+    color: #666;
+}
+   
+  /* IE */
+input:-ms-input-placeholder {
+    color: #666;
+}
+
+
+
+.posts-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 100px;
+    
+}
+.post1 {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid #323C59;
+    margin: 50px;
+    inline-size: 40%;
+
+}
+.icons{
+    display: block;
+    text-align: center;
+    width: 130px;
+    height: 130px;
+}
+.nameme{
+    font-size: 30px;
+    color: #323C59;
+    font-weight: normal;
+    text-align: center;
+    align-items: center;
+    padding: 24px;
+}
+.detailss{
+    display: flex;
+    text-align: center;
+    align-items: center;
+
+}
+.aq{
+    display: flex;
+    justify-content: space-around;
+    width: 150px;
+}
+.bq{
+    display: flex;
+    padding-right: 10px;
+}
+.border_spread_btn{
+    position: relative; 
+    display: block; 
+    margin-left: 13px;
+    color: #323C59; 
+    text-decoration: none;
+    border-top: 5px;
+}
+.border_spread_btn:hover{ 
+    cursor: pointer; 
+    text-decoration: none;
+    color: rgb(32, 66, 219);
+    transform: scale(1.1);
+    transition:1s all;
+}
+
+.border_spread_btn:hover::after{ 
+    transform: scale(1, 1);
+}
+
+
+/* fadeUp */
+
+.fadeUp{
+    animation-name:fadeUpAnime;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+    opacity:0;
+    }
+    
+    @keyframes fadeUpAnime{
+      from {
+        opacity: 0;
+      transform: translateY(100px);
+      }
+    
+      to {
+        opacity: 1;
+      transform: translateY(0);
+      }
+    }
+    
+    
+    /* スクロールをしたら出現する要素にはじめに透過0を指定　*/
+    .fadeUpTrigger{
+        opacity: 0;
+    }
+    .fadein{
+        transition: all 1s;
+        transition-delay: 0s;
+        opacity: 0;
+        transform: translate(0,50px);
+    }
+    .fadein-active {
+        opacity: 1;
+        transform: translate(0,0);
+    }
+
+    .delay-1s{
+        transition-delay: 0.5s;
+      }
+      
+      .delay-2s{
+        transition-delay: 1s;
+      }
+      .delay-3s{
+        transition-delay: 1.5s;
+      }
+
+
+
+      .icon {
+        width: 8.125em;
+        height: 8.125em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        border-radius: 50%;
+        background: #fff;
+        box-shadow: 0 0.3125em 1.5625em rgba(51,68,85,0.08);
+        transition: .9s all cubic-bezier(0.19, 1, 0.22, 1);
+    }
+    .icon:hover {
+        color:#F9F9F9;
+        background: black;
+        transform: scale(1.10);
+    }

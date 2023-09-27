@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>KPOP-DICTIONARY</title>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Noto+Sans:ital,wght@1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="css/5-2-1.css">
+
+
+
+    
+  </head>
+
+  <body>
+    <header>
+      <h1><%= link_to 'KPOP-DICTIONARY', posts_path %></h1>
+    
+      <div class="hamburger-menu">
+          <input type="checkbox" id="menu-btn-check">
+          <label for="menu-btn-check" class="menu-btn"><span></span></label>
+          <div class="menu-content">
+          <ul> 
+            <li><%= link_to '一覧', posts_path, class: "border_spread_btnn" %></li>
+            <% if user_signed_in? %>
+              <li><%= link_to 'マイページ', user_path(current_user.id), class: "border_spread_btnn" %></li>
+              <% if current_user.admin? %>
+                <li><%= link_to "新規投稿へ", new_admin_post_path, class: "border_spread_btnn" %></li>
+              <% end %>
+              <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "border_spread_btnn" %></li>
+            <% else %>
+              <li><%= link_to "新規登録", new_user_registration_path, class: "border_spread_btnn" %></li>
+              <li><%= link_to "ログイン", new_user_session_path, class: "border_spread_btnn" %></li>
+            <% end %>
+          </ul>
+      </div>
+      </div>
+    </header>
+    <main>
+      <%= yield %>
+    </main>
+    <footer>
+      <p>Copyright © GeekSalon All Rights Reserved.</p>
+    </footer>
+    
+  </body>
+</html>

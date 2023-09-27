@@ -1,0 +1,208 @@
+<head>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&family=Kosugi&family=Kosugi+Maru&family=Lato:wght@100&family=M+PLUS+2:wght@500&family=Noto+Sans+JP&family=Noto+Sans:ital,wght@1,700&family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+
+<br>
+<br>
+<br>
+<div class="tab-area">
+
+    <input id="tab-btn1" class="tab-btn" name="tab" type="radio" checked>
+    <input id="tab-btn2" class="tab-btn" name="tab" type="radio">
+    <input id="tab-btn3" class="tab-btn" name="tab" type="radio">
+    <input id="tab-btn4" class="tab-btn" name="tab" type="radio">
+
+    <ul class="tab-list-wrap">
+        <li><label id="tab-list1" class="tab-list" for="tab-btn1">ナムジャドル</label></li>
+        <li><label id="tab-list2" class="tab-list" for="tab-btn2">ヨジャドル</label></li>
+        <li><label id="tab-list3" class="tab-list" for="tab-btn3">事務所ごと</label></li>
+        <li><label id="tab-list4" class="tab-list" for="tab-btn4">デビュー順</label></li>
+    </ul>
+
+    <div class="tab-content-wrap">
+        <div id="tab-content1" class="tab-content">
+            <ul>
+                <% @posts.each do |t| %>
+                    <% if t.genre == "ナムジャドル" %> 
+                    <li>
+                        <h3><%= t.name %></h3>
+                        <div class="iii">
+                            <%= image_tag t.image_url, size: "250x200" if t.image? %>
+                        </div>
+                        <div class="btn-flat-simple">
+                            <i class="fa fa-caret-right"></i> <%= link_to"CHECK", post_path(t.id), class: "link" %>
+                        </div>
+                    </li>
+                    <% end %>
+                <% end %>
+                <br>
+                <br>
+                
+            </ul>
+        </div>
+
+
+        <div id="tab-content2" class="tab-content">
+            <ul>
+                <% @posts.each do |t| %>
+                    <% if t.genre == "ヨジャドル" %> 
+                    <li>
+                        <h3><%= t.name %></h3>
+                        <div class="ddd">
+                            <%= image_tag t.image_url, size: "250x200" if t.image? %>
+                        </div>
+                        <div class="btn-flat-simple">
+                            <i class="fa fa-caret-right"></i>  <%= link_to "CHECK", post_path(t.id), class: "link" %>
+                        </div>
+                    </li>
+                    <% end %>
+                <% end %>
+                <br>
+                <br>
+                <br>
+            </ul>
+        </div>
+
+
+        <div id="tab-content3" class="tab-content">
+        
+            <div class="first-block">
+                <image src="../../assets/sm.jpeg" class="first-img">
+                <div class="first-text">
+                    <span><br>SM ENTERTAINMENT GROUP</span>
+                    <br>
+                    <ul>
+                        <li>ビジュアル重視</li>
+                        <li>パフォーマンスレベルも高い</li>
+                    </ul>
+                    <div class="btn-flat-simple">
+                        <i class="fa fa-caret-right"></i>  <%= link_to "CHECK", posts_SM_path, class: "link" %>
+                    </div>
+                    
+                </div>
+            </div>
+
+                    
+            <div class="second-block">
+                <div class="second-text">
+                    <span><br>JYP ENTERTAINMENT</span>
+                    <br>
+                    <ul>
+                        <li>多国籍</li>
+                        <li>人間性を重視</li>
+                    </ul>
+                    <div class="btn-flat-simple">
+                        <i class="fa fa-caret-right"></i>  <%= link_to "CHECK", posts_JYP_path, class: "link" %>
+                    </div>
+                    
+                </div>
+                <image src="../../assets/jypp.png" class="second-img">
+            </div>
+
+
+            <div class="third-block">
+                <image src="../../assets/yg.jpg" class="third-img">
+                <div class="third-text">
+                    <span><br>YG ENTERTAINMENT</span>
+                    <ul>
+                        <li>ヒップホップ色が強い</li>
+                        <li>ビジュアルよりも個性やカリスマ性重視</li>
+                    </ul>
+                    <div class="btn-flat-simple">
+                        <i class="fa fa-caret-right"></i>  <%= link_to "CHECK", posts_YG_path, class: "link" %>
+                    </div>
+                    
+                </div>
+            </div>
+
+                    
+            <div class="forth-block">
+                <div class="forth-text">
+                    <span><br>HYBE ENTERTAINMENT</span>
+                    <ul>
+                        <li>実力重視</li>
+                        <li>アメリカでの活動にも力を入れている</li>
+                    </ul>
+                    <div class="btn-flat-simple">
+                        <i class="fa fa-caret-right"></i>  <%= link_to "CHECK", posts_HYBE_path, class: "link" %>
+                    </div>
+                    
+                </div>
+                <image src="../../assets/hybe.jpg" class="forth-img">
+            </div>
+
+                    
+            <div class="fifth-block">
+                <image src="../../assets/other.jpg" class="fifth-img">
+                <div class="fifth-text">
+                <span><br>その他</span>
+                <ul>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <div class="btn-flat-simple">
+                    <i class="fa fa-caret-right"></i>  <%= link_to "CHECK", posts_other_path, class: "link" %>
+                </div>
+                </div>
+            </div>
+
+            <br>
+            <br>
+            <br>
+        </div>
+
+        <div id="tab-content4" class="tab-content">
+            <ul class="timeline">
+                <% @posts.each do |t| %>
+                    
+                    <% if t.genre == "ナムジャドル" %> 
+                        <div class="youchan">
+                            <li>
+                            <div class="timeline-date"><%= t.age %></div>
+                            <div class="timelinebox">
+                                <div class="timeline-content">
+                                    <%= image_tag t.icon_url, size: "180x160" if t.icon? %>
+                                </div>
+                                <div class="timeline-name">
+                                    <div class="namec"><%= t.name %></div>
+                                    <div class="named"><%= link_to "CHECK", post_path(t.id), class: "border_spread_btns" %></div>
+                                </div>
+                                
+                            </div>
+                            </li>
+                        </div>
+                    <% else %>
+                        <div class="nozomi">
+                            <li>
+                            <div class="timeline-dates"><%= t.age %></div>
+                            <div class="timelineboxes">
+                                
+                                <div class="timeline-contents">
+                                    <%= image_tag t.icon_url, size: "180x160" if t.icon? %>
+                                    
+                                </div>
+                                <div class="timeline-names">
+                                    <div class="namea"><%= t.name %></div>
+                                    <div class="nameb"><%= link_to "CHECK", post_path(t.id), class: "border_spread_btns" %></div>
+                                </div>
+                            </div>
+                            </li>
+                        </div>
+                    <% end %>
+                    
+                <% end %>
+                <br>
+                <br>
+                <br>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+

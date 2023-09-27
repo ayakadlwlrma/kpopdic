@@ -1,0 +1,63 @@
+.nnn{
+    display: flex;
+    text-align: center;
+    height: 650px;  
+}
+
+.photos{
+    display: block;
+    width: 40%;
+    height: 650px;  
+
+    background-color: antiquewhite;
+}
+.signup{
+    display: block;
+    width: 60%;
+
+    
+}
+.kis{
+    display: block;
+    width: 40%;
+    height: 80%;
+    margin: 60px 260px;
+    border: solid #323C59;
+    border-radius: 10%;
+
+    padding: 0 30px;
+}
+.ees{
+    padding-top: 50px;
+    font-size: 30px;
+
+    font-family: 'Lato', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 43px;
+}
+.kis ul{
+    list-style: none;
+    text-align: center;
+    margin: 35px 50px;
+}
+ul input[type="text"] {
+    width: 200px;
+    height: 20px;
+}
+ul input[type="email"] {
+    width: 200px;
+    height: 20px;
+}
+ul input[type="password"] {
+    width: 200px;
+    height: 20px;
+}
+.kis li{
+    margin: 15px;
+}
+.send{
+    width: 200px;
+    height: 40px;
+    font-size: 17px;
+    margin-top: 5px;
+}

@@ -1,0 +1,29 @@
+// Place all the styles related to the admin::posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.ayakaaa{
+    background-image: url(iiuu.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 550px;
+}
+.ayakab{
+    background-color: rgba(162, 167, 173, 0.471);
+    width: 40%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    padding: 20px;
+    margin-top: 25px;
+}
+
+.ayakab{
+    input[type="submit"]{
+        background-color: aliceblue;
+    }
+}
+.field{
+    margin: 10px;
+}

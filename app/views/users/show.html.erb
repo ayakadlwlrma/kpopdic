@@ -1,0 +1,48 @@
+<%= stylesheet_link_tag 'users', :media => "all" %>
+
+<div class="zero">
+  <div class="first">
+
+  
+    <div class="third">
+      <div class="forth">
+        <div class="sixth">
+          <%= image_tag @user.image_url, size: "300×250" if @user.image? %>
+        </div>
+  
+        <div class="seventh">
+          <ul>
+            <li>name : <%= @user.name %></li>
+            <li>email : <%= @user.email %></li>
+            <li>profile : <%= @user.profile %></li>
+            <li>
+              <% if current_user.id == @user.id %>
+                <%= link_to "編集する", edit_user_registration_path %>
+              <% end %>
+            </li>
+          </ul>
+        </div>
+      </div>
+  
+      <div class="fifth">
+        <div class="okini">☆favorite</div>
+        <div class="iri">
+          <% @user.liked_posts.each do |t| %>
+            <div class="tenth">
+              <div class="eighth">
+                <%= image_tag t.icon_url, size: "150x150" if t.icon? %>
+              </div>
+              <div class="nineth">
+                <%= t.name %>
+              </div>
+              <div class="eleventh">
+                <%= link_to "CHECK", post_path(t.id) %>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+          
+    </div>
+  </div>
+</div>

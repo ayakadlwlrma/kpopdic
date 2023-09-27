@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<link rel="stylesheet" type="text/css" href="http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/3-2-3-1/css/reset.css">
+<link rel="stylesheet" type="text/css" href="http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/3-2-3-1/css/3-2-3-1.css">
+</head>
+
+
+<body>
+<%= stylesheet_link_tag 'index', :media => "all" %>
+
+<div class="wraptati">
+    <img src="../../../assets/iiuu.jpg" id="start" class="init">
+</div>
+
+<div class="link-container fadein">
+    <div class="a">
+    <a href="/posts/boy">
+        <div class="a-bnr fadein">
+            <img src="../../../assets/kpop boy.png" width="160" height="200">
+        </div>
+    </a>
+    </div>
+
+    <div class="b">
+    <a href="/posts/girl">
+        <div class="b-bnr fadein delay-1s">
+            <image src="../../../assets/kpop girl2.png" width="200" height="200">
+        </div>
+    </a>
+    </div>
+
+    <div class="c">
+    <a href="/posts/team">
+        <div class="c-bnr fadein delay-2s">
+            <image src="../../../assets/12.png" width="200" height="230">
+        </div>
+    </a>
+    </div>
+
+    <div class="d">
+    <a href="/posts/age">
+        <div class="d-bnr fadein delay-3s">
+            <image src="../../../assets/ages.png" width="200" height="200">
+        </div>
+    </a>
+    </div>
+</div>
+
+
+<div class="search-container">
+    <%= form_tag({controller:"posts",action:"index"}, method: :get) do %>
+        <%= text_field_tag :search, placeholder='グループ名を入力してください' %>
+        <%= submit_tag '検索' %>
+    <% end %>
+</div>
+
+
+    
+<div class="posts-container">
+    <% @posts.each do |t| %>
+        <div class="post1 fadein">
+            <div class="icons">
+                <%= image_tag t.icon_url, size: "130x130" if t.icon? %>
+            </div>
+            <div class="nameme">
+                <%= t.name %>
+            </div>
+
+            <div class="detailss">
+                <div class="aq">
+                    <% if user_signed_in? && current_user.id == t.user_id %>                  
+                        <%= link_to "EDIT", edit_post_path(t.id), class: "border_spread_btn" %>                    
+                        <%= link_to "DELETE", post_path(t.id), method: :delete, class: "border_spread_btn" %>
+                    <% end %>
+                    <%= link_to "SHOW", post_path(t.id),class: "border_spread_btn" %>
+
+                </div>
+
+            </div>
+        </div>
+    <% end %>
+</div>
+
+</body>
+
+
+<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<script src="js/3-2-3-1.js"></script>
+
+<script>
+console.log("js")
+function fadeAnime(){
+    console.log("fadeAnime")
+	$('.fadeUpTrigger').each(function(){
+		var elemPos = $(this).offset().top-50;
+		var scroll = $(window).scrollTop();
+		var windowHeight = $(window).height();
+		
+        console.log(scroll, scroll >= elemPos)
+		if(scroll >= elemPos){
+			$(this).addClass('fadeUp');
+		}
+	});
+}
+
+
+$(window).scroll(function() {
+	/*var scroll = $(window).scrollTop();
+	var windowHeight = $(window).height();
+	console.log("scroll")
+    console.log(scroll)
+	fadeAnime()*/
+    $('.fadein').each(function(){
+        // .fadeinクラスの要素位置
+        let elemPos = $(this).offset().top;
+        // 画面の高さ
+        let windowHeight = $(window).height();
+        // scroll位置
+        let scroll = $(window).scrollTop();
+
+        // .dadein-scrollクラスの要素が視界に少しでも入ればクラス付与
+        if (scroll > elemPos - windowHeight ) {
+            $(this).addClass('fadein-active');
+        }
+        // scroll位置が要素位置+要素の高さになるか、クラス付与する位置に戻るか
+        if (scroll > elemPos + $(this).height() || scroll < elemPos - windowHeight) {
+            $(this).removeClass('fadein-active');
+        }
+    });
+});
+
+
+let start = document.getElementById('start');
+start.classList.add("slow_zoom");
+</script>
+
+
+

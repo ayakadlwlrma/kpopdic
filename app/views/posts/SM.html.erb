@@ -1,0 +1,28 @@
+<div class="arrow-left icon">
+    <%= link_to posts_team_path, method: :get do %>
+        <img src="../../../assets/ya.png" width="100" height="100">
+    <% end %>
+</div>
+
+<div class="bbbb">
+    SM
+</div>
+<div class="tab-contentSM">
+    <ul>
+        <% @posts.each do |t| %>
+            <% if t.team == "SM" %> 
+            <li>
+                <h3><%= t.name %></h3>
+                <div class="uuu">
+                    <%= image_tag t.image_url, size: "250x200" if t.image? %>
+                </div>
+                <div class="btn-flat-simple">
+                    <i class="fa fa-caret-right"></i>  <%= link_to "CHECK", post_path(t.id), class: "link" %>
+                </div>
+            </li>
+            <% end %>
+        <% end %>
+    </ul>
+</div>
+
+
